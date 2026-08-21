@@ -172,6 +172,28 @@
         });
     </script>
 
+    <script>
+    const formularioSeo = document.querySelector('.formulario-seo');
+    if (formularioSeo) {
+        formularioSeo.addEventListener('submit', (e) => {
+            // Evitamos que recargue la página si quieres simularlo
+            e.preventDefault();
+            
+            // Enviamos el evento personalizado a Google Analytics 4
+            gtag('event', 'enviar_auditoria', {
+                'event_category': 'formulario',
+                'event_label': 'Solicitud de Auditoría'
+            });
+
+            // Opcional: Mostrar un mensaje visual de éxito al usuario
+            alert('¡Solicitud simulada con éxito! Evento enviado a GA4.');
+            
+            // Opcional: Si quieres que se envíe de verdad tras disparar el evento
+            // formularioSeo.submit(); 
+        });
+    }
+</script>
+
 </body>
 
 </html>
