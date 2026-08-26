@@ -54,8 +54,6 @@ if (blogContainer) {
             
             `;
  
-            
-            const boton = div.querySelector('.btn-leer');
         
         
         // Añadimos la tarjeta generada al contenedor principal de la página
