@@ -3,14 +3,14 @@
 
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-T9F6XPNSYG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T9F6XPNSYG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'G-T9F6XPNSYG');
-</script>
+        gtag('config', 'G-T9F6XPNSYG');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
@@ -55,6 +55,8 @@
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="metodologia.html" class="active">Metodología</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="pildoras-seo.html">Píldoras SEO</a></li>
+
             </ul>
         </nav>
     </header>
@@ -228,7 +230,7 @@
 
     <footer class="pie">
         <div class="pie-individual">
-            <p>&copy; 2025 La Factoría del SEO. Todos los derechos reservados. 
+            <p>&copy; 2025 La Factoría del SEO. Todos los derechos reservados.
                 <a href="#header-principal">Volver al
                     inicio
                 </a>
@@ -248,14 +250,7 @@
         </div>
 
     </footer>
-    <script>
-        const botonMenu = document.querySelector('.menu-desplegable');
-        const listaMenu = document.querySelector('.nav-menu .menu');
-
-        botonMenu.addEventListener('click', () => {
-            listaMenu.classList.toggle('show');
-        });
-    </script>
+    <script src="pildoras.js"></script>
 
 </body>
 
