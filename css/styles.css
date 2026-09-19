@@ -162,16 +162,30 @@ i {
   color: var(--color-oscuro);
 }
 
+/* ==========================================
+   PIE DE PÁGINA ACTUALIZADO Y FLEXIBLE
+   ========================================== */
+
 .pie {
   font-size: 0.9rem;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
   gap: 20px;
-  padding: 15px 6%;
+  padding: 20px 6%;
   border-top: var(--color-borde) 1px solid;
+  background-color: var(--color-blanco);
 }
 
 .pie-individual {
-  width: 100%;
+  width: auto;
+  flex: 1;
+}
+
+.pie-individual p {
+  margin: 0;
+  color: var(--color-texto-suave);
 }
 
 .pie-individual a {
@@ -179,13 +193,18 @@ i {
   color: var(--color-principal);
 }
 
+.pie-individual a:hover {
+  text-decoration: underline;
+}
+
 .iconos {
-  padding: 5px 0px;
+  padding: 0;
+  display: flex;
+  align-items: center;
 }
 
 .iconos i {
   font-size: 1.5rem;
-
   color: var(--color-principal);
 }
 
@@ -796,6 +815,10 @@ td h3 {
   margin: 0 auto;
 }
 
+body:has(.pildoras-seccion) .hero {
+    border-bottom: none;
+}
+
 .blog-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -814,7 +837,6 @@ td h3 {
 .tarjeta-blog:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
   border-color: var(--color-principal);
-  /* O el color principal que uses */
 }
 
 
@@ -938,7 +960,6 @@ a.btn-leer:hover {
 .contenedor-articulo {
   max-width: 900px;
   margin: 0 auto;
-  /* padding: 50px 20px; */
 }
 
 .cuerpo-articulo {
@@ -955,19 +976,18 @@ a.btn-leer:hover {
   padding-bottom: 8px;
 }
 
-/* Margen limpio y legible para los párrafos */
 .cuerpo-articulo p {
   margin-bottom: 22px;
   font-size: 1.05rem;
 }
 
-/* Caja de conclusión / destacada con barra lateral */
 .caja-conclusion {
   background: var(--color-fondo-alterno, #f9f9f9);
   border: 1px solid var(--color-borde, #e2e8f0);
   padding: 25px;
   border-radius: 8px;
   margin-top: 45px;
+  margin-bottom: 60px;
 }
 
 .caja-conclusion h3 {
@@ -979,12 +999,6 @@ a.btn-leer:hover {
 .caja-conclusion p {
   margin-bottom: 0;
 }
-
-
-
-
-
-
 
 /* --------------------------------------------------------------------------
    PUNTO DE ROTURA 1: Pantallas menores de 1148px (Escritorio servicios retoque)
@@ -1048,13 +1062,11 @@ a.btn-leer:hover {
   }
 }
 
-
 /* --------------------------------------------------------------------------
    PUNTO DE ROTURA 3: Pantallas menores de 941px ajuste de tamaño de herramientas
    -------------------------------------------------------------------------- */
 
 @media (max-width: 941px) {
-
   .herramientas-grid {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 20px;
@@ -1160,6 +1172,16 @@ a.btn-leer:hover {
     padding-right: 12px;
   }
 
+  .pie {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .pie-individual {
+    width: 100%;
+  }
+
   .boton {
     margin: 50px auto;
   }
@@ -1235,9 +1257,8 @@ a.btn-leer:hover {
 }
 
 /* --------------------------------------------------------------------------
-   PUNTO DE ROTURA 4: Pantallas menores de 640px (Móviles estándar)
+   PUNTO DE ROTURA 5: Pantallas menores de 640px (Móviles estándar)
    -------------------------------------------------------------------------- */
-
 
 @media (max-width: 640px) {
   .hero p {

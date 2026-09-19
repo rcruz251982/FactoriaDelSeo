@@ -15,11 +15,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Aprende cómo reducir el Time to First Byte (TTFB) en servidores compartidos. Claves de optimización de caché, bases de datos y CDN para SEO técnico.">
-    <title>La Factoría del SEO | Cómo reducir el TTFB en servidores compartidos</title>
+        content="El Time to First Byte es una de las métricas de rendimiento más críticas para el rastreo y la experiencia de usuario. Descubre cómo rasurar milisegundos cuando los recursos del servidor son limitados.">
+    <title>Cómo reducir el TTFB en servidores compartidos | La Factoría del SEO</title>
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://rcruz251982.github.io/FactoriaDelSeo/reducir-ttfb-servidor-compartido.html">
-    <!-- Fuentes y Estilos -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -28,16 +29,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
         rel="stylesheet">
-
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="favicon-desktop.png" type="image/x-icon">
 </head>
 
 <body>
-
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WZG776Q9" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
@@ -48,7 +42,7 @@
             <i class="bi bi-list"></i>
         </button>
         <nav class="nav-menu">
-            <div class="logo">LA FACTORÍA DEL SEO</div>
+            <div class="logo"><a href="index.html">LA FACTORÍA DEL SEO</a></div>
             <ul class="menu">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="metodologia.html">Metodología</a></li>
@@ -59,90 +53,54 @@
     </header>
 
     <main>
-        <!-- Cabecera del Artículo -->
-        <section class="hero">
-            <div class="hero-content">
-                <div class="hero-content-mpan">
-                    <p><i class="bi bi-speedometer2"></i> WPO Y RENDIMIENTO</p>
-                </div>
-                <h1>Cómo reducir el TTFB en<br><span>servidores compartidos.</span></h1>
-                <p>El Time to First Byte es una de las métricas de rendimiento más críticas para el rastreo y la
-                    experiencia de usuario. Descubre cómo rasurar milisegundos cuando los recursos del servidor son
-                    limitados.</p>
-
-                <div class="boton">
-                    <a href="categoria-wpo.html" class="btn-primary"><i class="bi bi-arrow-left"></i> Volver a WPO</a>
-                    <a href="contacto.html" class="btn-secundary">Auditoría WPO <i class="bi bi-arrow-right"></i></a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Cuerpo del Artículo -->
-        <section class="proceso-auditoria">
-            <div class="contenedor-articulo">
-
-                <article class="cuerpo-articulo">
-
-                    <h2>¿Qué es el TTFB y por qué penaliza en servidores compartidos?</h2>
-                    <p>El <strong>Time to First Byte (TTFB)</strong> mide el tiempo exacto que transcurre desde que un
-                        navegador realiza una petición HTTP hasta que recibe el primer byte de información procedente
-                        del servidor. A nivel de SEO técnico, Google recomienda mantener esta métrica por debajo de los
-                        0.8 segundos.</p>
-                    <p>El verdadero problema surge cuando alojamos nuestro sitio en un <strong>servidor
-                            compartido</strong>. Al repartir los recursos de CPU, disco y memoria RAM entre cientos de
-                        webs vecinas, cualquier pico de tráfico ajeno repercute directamente en el tiempo de respuesta
-                        de nuestro propio backend.</p>
-
-                    <h2>Cómo diagnosticar un TTFB elevado antes de actuar</h2>
-                    <p>Antes de aplicar cualquier optimización, es fundamental medir el punto de partida. Herramientas
-                        como <em>WebPageTest</em> o las pestañas de red en las herramientas de desarrollador del
-                        navegador nos permiten aislar el tiempo de respuesta del servidor frente al tiempo de descarga
-                        de recursos estáticos.</p>
-
-                    <h2>1. Implementa caché a nivel de servidor (Opcode y Object Cache)</h2>
-                    <p>En gestores de contenidos como WordPress, cada visita obliga a PHP a procesar scripts pesados y
-                        lanzar consultas recurrentes a la base de datos. Para evitar que el servidor trabaje doble:</p>
-                    <ul>
-                        <li><strong>Asegura OPcache:</strong> Permite almacenar en memoria los scripts PHP ya
-                            compilados, evitando tener que interpretarlos desde cero en cada petición.</li>
-                        <li><strong>Utiliza Object Cache (Redis o Memcached):</strong> Si tu proveedor de hosting lo
-                            soporta, almacena los resultados de consultas frecuentes a la base de datos en la memoria
-                            RAM del servidor.</li>
-                    </ul>
-
-                    <h2>2. Realiza un mantenimiento estricto de la Base de Datos</h2>
-                    <p>Un hosting compartido sufre enormemente con bases de datos desorganizadas. Con el paso del tiempo
-                        se acumulan revisiones de entradas huérfanas, transitorios caducados y tablas sobrecargadas por
-                        plugins ineficientes. Limpiar este volumen de datos aligera de forma notable el trabajo del
-                        backend antes de que genere el código HTML.</p>
-
-                    <h2>3. Desplaza la carga con una CDN y caché de bordes</h2>
-                    <p>Cuando los límites físicos del servidor compartido impiden rasurar más milisegundos, la solución
-                        más eficaz pasa por colocar un proxy inverso como <strong>Cloudflare</strong> delante de nuestra
-                        infraestructura.</p>
-                    <p>Al configurar reglas de caché de bordes (*Cache Everything*), Cloudflare intercepta la petición
-                        del usuario y sirve una copia estática de la página de forma casi instantánea desde el servidor
-                        más cercano geográficamente, evitando por completo que la consulta llegue a saturar el hosting
-                        principal.</p>
-
-                    <div class="caja-conclusion">
-                        <h3><i class="bi bi-lightbulb"></i> Conclusión técnica</h3>
-                        <p>Aunque migrar a un Servidor Privado Virtual (VPS) es la vía definitiva para proyectos con
-                            alta exigencia de tráfico, exprimir las opciones de caché a nivel de servidor y apoyarse en
-                            una CDN permite mantener un rendimiento óptimo y competitivo en alojamientos compartidos sin
-                            grandes inversiones iniciales.</p>
+        <div class="contenedor-articulo">
+            <section class="hero">
+                <div class="hero-content">
+                    <div class="hero-content-mpan">
+                        <p><i class="bi bi-speedometer2"></i> WPO Y RENDIMIENTO</p>
                     </div>
+                    <h1>Cómo reducir el TTFB en <br><span>servidores compartidos.</span></h1>
+                    <p>El Time to First Byte es una de las métricas de rendimiento más críticas para el rastreo y la experiencia de usuario. Descubre cómo rasurar milisegundos cuando los recursos del servidor son limitados.</p>
+                    <div class="boton">
+                        <a href="categoria-wpo.html" class="btn-primary"><i class="bi bi-arrow-left"></i> Volver a WPO</a>
+                        <a href="contacto.html" class="btn-secundary">Auditoría WPO</a>
+                    </div>
+                </div>
+            </section>
 
-                </article>
+            <section class="cuerpo-articulo">
+                <h2>¿Qué es el TTFB y por qué penaliza en servidores compartidos?</h2>
+                <p>El Time to First Byte (TTFB) mide el tiempo exacto que transcurre desde que un navegador realiza una petición HTTP hasta que recibe el primer byte de información procedente del servidor. A nivel de SEO técnico, Google recomienda mantener esta métrica por debajo de los 0.8 segundos.</p>
+                <p>El verdadero problema surge cuando alojamos nuestro sitio en un servidor compartido. Al repartir los recursos de CPU, disco y memoria RAM entre cientos de webs vecinas, cualquier pico de tráfico ajeno repercute directamente en el tiempo de respuesta de nuestro propio backend.</p>
 
-            </div>
-        </section>
+                <h2>Cómo diagnosticar un TTFB elevado antes de actuar</h2>
+                <p>Antes de aplicar cualquier optimización, es fundamental medir el punto de partida. Herramientas como WebPageTest o las pestañas de red en las herramientas de desarrollador del navegador nos permiten aislar el tiempo de respuesta del servidor frente al tiempo de descarga de recursos estáticos.</p>
+
+                <h2>1. Implementa caché a nivel de servidor (Opcode y Object Cache)</h2>
+                <p>En gestores de contenidos como WordPress, cada visita obliga a PHP a procesar scripts pesados y lanzar consultas recurrentes a la base de datos. Para evitar que el servidor trabaje doble:</p>
+                <ul>
+                    <li><strong>Asegura OPcache:</strong> Permite almacenar en memoria los scripts PHP ya compilados, evitando tener que interpretarlos desde cero en cada petición.</li>
+                    <li><strong>Utiliza Object Cache (Redis o Memcached):</strong> Si tu proveedor de hosting lo soporta, almacena los resultados de consultas frecuentes a la base de datos en la memoria RAM del servidor.</li>
+                </ul>
+
+                <h2>2. Realiza un mantenimiento estricto de la Base de Datos</h2>
+                <p>Un hosting compartido sufre enormemente con bases de datos desorganizadas. Con el paso del tiempo se acumulan revisiones de entradas huérfanas, transitorios caducados y tablas sobrecargadas por plugins ineficientes. Limpiar este volumen de datos aligera de forma notable el trabajo del backend antes de que genere el código HTML.</p>
+
+                <h2>3. Desplaza la carga con una CDN y caché de bordes</h2>
+                <p>Cuando los límites físicos del servidor compartido impiden rasurar más milisegundos, la solución más eficaz pasa por colocar un proxy inverso como Cloudflare delante de nuestra infraestructura.</p>
+                <p>Al configurar reglas de caché de bordes (<em>Cache Everything</em>), Cloudflare intercepta la petición del usuario y sirve una copia estática de la página de forma casi instantánea desde el servidor más cercano geográficamente, evitando por completo que la consulta llegue a saturar el hosting principal.</p>
+
+                <div class="caja-conclusion">
+                    <h3>Conclusión técnica</h3>
+                    <p>Aunque migrar a un Servidor Privado Virtual (VPS) es la vía definitiva para proyectos con alta exigencia de tráfico, exprimir las opciones de caché a nivel de servidor y apoyarse en una CDN permite mantener un rendimiento óptimo y competitivo en alojamientos compartidos sin grandes inversiones iniciales.</p>
+                </div>
+            </section>
+        </div>
     </main>
 
     <footer class="pie">
         <div class="pie-individual">
-            <p>&copy; 2026 La Factoría del SEO. Todos los derechos reservados. <a href="#header-principal">Volver al
-                    inicio</a></p>
+            <p>&copy; 2026 La Factoría del SEO. Todos los derechos reservados. <a href="#header-principal">Volver al inicio</a></p>
         </div>
         <div class="iconos">
             <a href="https://www.linkedin.com/in/ricardcruzseo/" target="_blank"><i class="bi bi-linkedin"></i></a>
@@ -155,6 +113,7 @@
         </div>
     </footer>
 
+    <!-- Script JavaScript externo -->
     <script src="pildoras.js"></script>
 </body>
 

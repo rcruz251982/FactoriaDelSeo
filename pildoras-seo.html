@@ -12,18 +12,11 @@
                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-WZG776Q9');</script>
     <!-- End Google Tag Manager -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T9F6XPNSYG"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-T9F6XPNSYG');
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Píldoras de SEO Técnico: Consejos rápidos y precisos sobre rendimiento, indexación y optimización web.">
-    <title>La Factoría del SEO | Píldoras SEO Técnico</title>
+        content="Conocimiento condensado para optimización técnica: WPO, Indexación y Canonicidad.">
+    <title>Píldoras SEO | La Factoría del SEO</title>
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://rcruz251982.github.io/FactoriaDelSeo/pildoras-seo.html">
     <link rel="stylesheet" href="css/styles.css">
@@ -34,7 +27,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
     <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Noto+Sans+Ol+Chiki:wght@400..700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
         rel="stylesheet">
 </head>
 
@@ -45,8 +38,11 @@
     <!-- End Google Tag Manager (noscript) -->
 
     <header id="header-principal">
+        <button class="menu-desplegable" aria-label="Abrir menú">
+            <i class="bi bi-list"></i>
+        </button>
         <nav class="nav-menu">
-            <div class="logo">LA FACTORÍA DEL SEO</div>
+            <div class="logo"><a href="index.html">LA FACTORÍA DEL SEO</a></div>
             <ul class="menu">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="metodologia.html">Metodología</a></li>
@@ -57,20 +53,60 @@
     </header>
 
     <main>
-        <section class="pildoras-seccion">
-            <div class="hero-content-mpan">
-                <p><i class="bi bi-lightbulb-fill"></i> PÍLDORAS SEO</p>
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-content-mpan">
+                    <p><i class="bi bi-lightbulb"></i> PÍLDORAS SEO</p>
+                </div>
+                <h1>Conocimiento condensado para <br><span>optimización técnica.</span></h1>
+                <p>Explora guías prácticas, consejos directos y recursos clave diseñados para mejorar el rendimiento, el rastreo y la estructura de tu sitio web sin rodeos técnicos innecesarios.</p>
             </div>
-            <h1>Conocimiento condensado para<br>
-                <span>optimización técnica.</span>
-            </h1>
+        </section>
 
-            <div class="blog-grid" id="blog-container">
-                <!-- El JS inyectará las tarjetas aquí -->
+        <section class="pildoras-seccion">
+            <div class="blog-grid">
+                
+                <article class="tarjeta-blog">
+                    <h3>WPO</h3>
+                    <p style="font-size: 0.85rem; color: var(--color-texto-suave); margin-bottom: 12px;">Optimización de velocidad y rendimiento web</p>
+                    <p>Mejora el TTFB, optimiza recursos y acelera tus tiempos de carga.</p>
+                    <a href="categoria-wpo.html" class="btn-leer">Ir a artículos de WPO</a>
+                </article>
+
+                <article class="tarjeta-blog">
+                    <h3>Indexación</h3>
+                    <p style="font-size: 0.85rem; color: var(--color-texto-suave); margin-bottom: 12px;">Gestión de bots y rastreo</p>
+                    <p>Domina el robots.txt, los meta robots y haz que Google descubra tu contenido.</p>
+                    <a href="#" class="btn-leer">Ir a artículos de Indexación</a>
+                </article>
+
+                <article class="tarjeta-blog">
+                    <h3>Canonicidad</h3>
+                    <p style="font-size: 0.85rem; color: var(--color-texto-suave); margin-bottom: 12px;">Control del contenido duplicado</p>
+                    <p>Aprende a usar etiquetas canonical y evita problemas de canibalización.</p>
+                    <a href="#" class="btn-leer">Ir a artículos de Canonicidad</a>
+                </article>
+
             </div>
         </section>
     </main>
 
+    <footer class="pie">
+        <div class="pie-individual">
+            <p>&copy; 2026 La Factoría del SEO. Todos los derechos reservados. <a href="#header-principal">Volver al inicio</a></p>
+        </div>
+        <div class="iconos">
+            <a href="https://www.linkedin.com/in/ricardcruzseo/" target="_blank"><i class="bi bi-linkedin"></i></a>
+        </div>
+        <div class="iconos">
+            <a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
+        </div>
+        <div class="iconos">
+            <a href="https://www.youtube.com/" target="_blank"><i class="bi bi-youtube"></i></a>
+        </div>
+    </footer>
+
+    <!-- Script JavaScript externo -->
     <script src="pildoras.js"></script>
 </body>
 
